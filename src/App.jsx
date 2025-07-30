@@ -1,12 +1,12 @@
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
 import TodoItems from "./components/TodoItems";
-import { useState, useEffect } from "react"; // ✅ import useEffect
+import { useState, useEffect } from "react"; // import useEffect
 import WelcomeMessage from "./components/WelcomeMessage";
 import "./App.css";
 
 function App() {
-  // ✅ Load from localStorage if available
+  // Load from localStorage if available
   const getLocalTodos = () => {
     const saved = localStorage.getItem("todoItems");
     return saved ? JSON.parse(saved) : [];
@@ -14,7 +14,7 @@ function App() {
 
   const [todoItems, setTodoItems] = useState(getLocalTodos);
 
-  // ✅ Save to localStorage on every change
+  // Save to localStorage on every change
   useEffect(() => {
     localStorage.setItem("todoItems", JSON.stringify(todoItems));
   }, [todoItems]);
