@@ -13,6 +13,10 @@ function AddTodo({ onNewItem }) {
   };
 
   const handleAddButtonClicked = () => {
+    if (!todoName.trim() || !dueDate.trim()) {
+      alert("Please enter both Todo name and Due date!");
+      return;
+    }
     onNewItem(todoName, dueDate);
     setDueDate("");
     setTodoName("");
