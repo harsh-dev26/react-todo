@@ -1,3 +1,4 @@
+import { IoCheckmarkDoneSharp } from "react-icons/io5";
 function TodoItem({ todoName, todoDate, onDeleteClick }) {
   return (
     <div className="container">
@@ -10,7 +11,7 @@ function TodoItem({ todoName, todoDate, onDeleteClick }) {
             className="btn btn-danger kg-button"
             onClick={() => onDeleteClick(todoName)}
           >
-            Delete
+            <IoCheckmarkDoneSharp />
           </button>
         </div>
       </div>
